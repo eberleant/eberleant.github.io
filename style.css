@@ -160,12 +160,12 @@ li {
 	#m-navbar-btn {
 		display: block;
 		position: fixed;
-		color: gray;
+		color: white;
+		mix-blend-mode: difference;
 		font-size: 1.5em;
 		padding: 20px 40px;
 		right: 0;
 		z-index: 2;
-		-webkit-backface-visibility: hidden;
 	}
 
 	#m-navbar {
@@ -179,7 +179,6 @@ li {
 		height: 100%;
 		background-color: #484d6d;
 		z-index: 1;
-		-webkit-backface-visibility: hidden;
 	}
 
 	#m-navbar button {
@@ -188,7 +187,6 @@ li {
 		width: 100%;
 		background-color: transparent;
 		padding: 10px 40px;
-		-webkit-backface-visibility: hidden;
 	}
 
 	.subsection {
