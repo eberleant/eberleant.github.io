@@ -1,0 +1,140 @@
+#navbar {
+	background-color: #484d6d;
+	width: 100%;
+	height: 35px;
+	position: fixed;
+	text-align: center;
+}
+
+#navbar button {
+	-webkit-appearance: none;
+	font-family: "Verdana";
+	font-size: 1.2em;
+	color: #eaeaea;
+	background-color: transparent;
+	padding: 5px 40px;
+	border: none;
+	outline: none;
+}
+
+#navbar button:hover {
+	color: white;
+}
+
+#navbar button:active {
+	background-color: #7392b7;
+	color: white;
+}
+
+#navbar button span {
+	font-size: 1.1em;
+}
+
+#navbar-space {
+	height: 35px;
+}
+
+#header {
+	background-color: transparent;
+	text-align: center;
+	padding: 50px 0;
+}
+
+#header-bg {
+	background-color: #7392b7; /*if gradients not supported*/
+	background-image: linear-gradient(#484d6d 0%, 5%, #7392b7 50%, 95%, #484d6d 100%);
+	height: 186px;
+	width: 100%;
+	position: fixed;
+	z-index: -2;
+}
+
+#contents {
+	width: 100%;
+	background-color: white;
+}
+
+h1 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 3em;
+	font-weight: bold;
+	color: white;
+	text-shadow: 2px 2px 3px #484d6d;
+	padding: 5px 0;
+}
+
+h1 span {
+	font-size: 1.2em;
+}
+
+h2 {
+	font-family: "Verdana";
+	font-size: 1.2em;
+	color: #484d6d;
+}
+
+
+.subsection {
+	padding: 30px 15% 0 15%;
+}
+
+h3 {
+	font-family: "Open Sans", sans-serif;
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #759eb8;
+	border-bottom: 2px solid #b3c5d7;
+	padding: 5px 0 5px 3px;
+	margin-bottom: 20px;
+}
+
+h3 span {
+	font-size: 1.05em;
+}
+
+h4 {
+	font-family: "Verdana";
+	font-size: 1.3em;
+	color: black;
+	margin: 30px 0 5px 0;
+}
+
+p, li {
+	font-family: "Verdana";
+	font-size: 1em;
+	color: black;
+	margin: 2px 0;
+	line-height: 1.35em;
+}
+
+ul {
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+li {
+	display: list-item;
+}
+
+#resume-dl {
+	-webkit-appearance: none;
+	font-family: "Verdana";
+	font-size: 1em;
+	color: black;
+	text-decoration: none;
+	background-color: #f5fbfd;
+	padding: 5px 20px 5px 15px;
+	border: 2px solid #b3c5d7;
+	outline: none;
+	margin-left: 5px;
+}
+
+#resume-dl:hover {
+	border: 2px solid darkgray;
+	background-color: white;
+}
+
+#resume-dl:active {
+	border: 2px solid black;
+	background-color: #ffffe6;
+}
