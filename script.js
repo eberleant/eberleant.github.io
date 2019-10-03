@@ -24,6 +24,7 @@ const scrollOptions = {
 
 headerBg.style.height = header.clientHeight + "px";
 
+//click events to scroll to the appropriate section
 navAbout.addEventListener("click", e => sectionAbout.scrollIntoView(scrollOptions));
 navResume.addEventListener("click", e => sectionResume.scrollIntoView(scrollOptions));
 navProgramming.addEventListener("click", e => sectionProgramming.scrollIntoView(scrollOptions));
@@ -33,8 +34,10 @@ mNavResume.addEventListener("click", e => sectionResume.scrollIntoView(scrollOpt
 mNavProgramming.addEventListener("click", e => sectionProgramming.scrollIntoView(scrollOptions));
 mNavFooter.addEventListener("click", e => sectionFooter.scrollIntoView(scrollOptions));
 mNavBtn.addEventListener("click", toggleMobileMenu);
+//set hamburger menu to initially be closed (offscreen)
 mNavbar.style.right = -mNavbarWidth + "px";
 
+//open and close the hamburger menu on mobile
 function toggleMobileMenu() {
 	if (mNavbar.style.right == "0px" || mNavbar.style.right == "" || mNavbar.style.right == "0") {
 		window.requestAnimationFrame(function(){
@@ -55,6 +58,7 @@ function toggleMobileMenu() {
 
 
 // from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+// allow swiping to open and close hamburger menu
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 

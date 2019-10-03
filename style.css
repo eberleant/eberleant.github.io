@@ -58,7 +58,11 @@
 	padding-bottom: 20px;
 }
 
-h1 {
+.subsection {
+	padding: 30px 15% 0 15%;
+}
+
+h1 { /* "Evalyn Berleant" in header at top of page */
 	font-family: "Open Sans", sans-serif;
 	font-size: 3em;
 	font-weight: bold;
@@ -67,22 +71,17 @@ h1 {
 	padding: 5px 0;
 }
 
-h1 span {
+h1 span { /* increase size of first letter (big caps/small caps effect) */
 	font-size: 1.2em;
 }
 
-h2 {
+h2 { /* subheader at top of page */
 	font-family: "Verdana";
 	font-size: 1.2em;
 	color: #b3c5d7;
 }
 
-
-.subsection {
-	padding: 30px 15% 0 15%;
-}
-
-h3 {
+h3 { /* titles of each content section */
 	font-family: "Open Sans", sans-serif;
 	font-size: 2.5em;
 	font-weight: bold;
@@ -92,11 +91,11 @@ h3 {
 	margin-bottom: 20px;
 }
 
-h3 span {
+h3 span { /* increase size of first letter */
 	font-size: 1.05em;
 }
 
-h4 {
+h4 { /* subheaders inside of each content section */
 	font-family: "Verdana";
 	font-size: 1.3em;
 	color: black;
@@ -143,6 +142,10 @@ li {
 	background-color: #ffffe6;
 }
 
+.footnote {
+	font-size: .7em;
+}
+
 @viewport {
   width: device-width ;
   zoom: 1.0 ;
@@ -152,6 +155,7 @@ li {
   width: device-width ;
 }
 
+/* mobile specific formatting */
 @media screen and (max-width:735px) {
 	#navbar, #navbar-space {
 		display: none;
@@ -191,5 +195,17 @@ li {
 
 	.subsection {
 		padding: 30px 5% 0 5%;
+	}
+
+	h4 {
+		font-size: 1.7em;
+	}
+
+	h4 span {
+		font-weight: bold;
+	}
+
+	p {
+		font-size: 1.3em;
 	}
 }
