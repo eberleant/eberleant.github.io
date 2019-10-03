@@ -178,6 +178,7 @@ li {
 		height: 100%;
 		background-color: #484d6d;
 		z-index: 1;
+		-webkit-backface-visibility: hidden;
 	}
 
 	#m-navbar button {
