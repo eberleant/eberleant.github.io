@@ -6,7 +6,7 @@
 	text-align: center;
 }
 
-#navbar button {
+#navbar button, #m-navbar button {
 	-webkit-appearance: none;
 	font-family: "Verdana";
 	font-size: 1.2em;
@@ -34,6 +34,10 @@
 	height: 35px;
 }
 
+#m-navbar, #m-navbar-btn {
+	display: none;
+}
+
 #header {
 	background-color: transparent;
 	text-align: center;
@@ -43,7 +47,6 @@
 #header-bg {
 	background-color: #7392b7; /*if gradients not supported*/
 	background-image: linear-gradient(#484d6d 0%, 5%, #7392b7 50%, 95%, #484d6d 100%);
-	height: 186px;
 	width: 100%;
 	position: fixed;
 	z-index: -2;
@@ -148,23 +151,35 @@ li {
   width: device-width ;
 }
 
-@media screen and (max-width:480px) {
-	.subsection {
-		padding: 30px 5% 0 5%;
-	}
-
-	#navbar, #navbar-space {
-		display: none;
-	}
-
-	#header-bg {
-		height: 262px;
-	}
-}
-
 @media screen and (max-width:735px) {
 	#navbar, #navbar-space {
 		display: none;
+	}
+
+	#m-navbar-btn {
+		display: block;
+		position: fixed;
+		color: white;
+		padding: 20px 40px;
+		right: 0;
+		z-index: 2;
+	}
+
+	#m-navbar {
+		display: hidden;
+		position: fixed;
+		right: 0;
+		padding-top: 20%;
+		height: 100%;
+		background-color: #484d6d;
+		z-index: 1;
+	}
+
+	#m-navbar button {
+		display: block;
+		text-align: right;
+		width: 100%;
+		background-color: transparent;
 	}
 
 	.subsection {
