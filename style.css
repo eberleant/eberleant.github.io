@@ -138,3 +138,36 @@ li {
 	border: 2px solid black;
 	background-color: #ffffe6;
 }
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width ;
+}
+
+@media screen and (max-width:480px) {
+	.subsection {
+		padding: 30px 5% 0 5%;
+	}
+
+	#navbar, #navbar-space {
+		display: none;
+	}
+
+	#header-bg {
+		height: 262px;
+	}
+}
+
+@media screen and (max-width:735px) {
+	#navbar, #navbar-space {
+		display: none;
+	}
+
+	.subsection {
+		padding: 30px 5% 0 5%;
+	}
+}
