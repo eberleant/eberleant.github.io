@@ -1,9 +1,10 @@
 #navbar {
 	background-color: #484d6d;
-	width: 100%;
+	width: 100vw;
 	height: 35px;
 	position: fixed;
 	text-align: center;
+	overflow: hidden;
 }
 
 #navbar button, #m-navbar button {
@@ -47,19 +48,19 @@
 #header-bg {
 	background-color: #7392b7; /*if gradients not supported*/
 	background-image: linear-gradient(#484d6d 0%, 5%, #7392b7 50%, 95%, #484d6d 100%);
-	width: 100%;
+	width: 100vw;
 	position: fixed;
 	z-index: -2;
 }
 
 #contents {
-	width: 100%;
+	width: 100vw;
 	background-color: white;
 	padding-bottom: 20px;
 }
 
 .subsection {
-	padding: 30px 15% 0 15%;
+	padding: 30px 15vw 0 15vw;
 }
 
 h1 { /* "Evalyn Berleant" in header at top of page */
@@ -97,14 +98,18 @@ h3 span { /* increase size of first letter */
 
 h4 { /* subheaders inside of each content section */
 	font-family: "Verdana";
-	font-size: 1.3em;
+	font-size: 1.7em;
 	color: black;
-	margin: 30px 0 5px 0;
+	margin: 30px 0 10px 0;
 }
 
-p, li, #resume-dl {
+h4 span {
+	font-weight: bold;
+}
+
+p, li, .content-btn {
 	font-family: "Verdana";
-	font-size: 1em;
+	font-size: 1.3em;
 	color: black;
 	margin: 2px 0;
 	line-height: 1.35em;
@@ -119,7 +124,7 @@ li {
 	display: list-item;
 }
 
-#resume-dl {
+.content-btn {
 	-webkit-appearance: none;
 	font-family: "Verdana";
 	color: black;
@@ -131,12 +136,12 @@ li {
 	margin-left: 5px;
 }
 
-#resume-dl:hover {
+.content-btn:hover {
 	border: 2px solid darkgray;
 	background-color: white;
 }
 
-#resume-dl:active {
+.content-btn:active {
 	border: 2px solid black;
 	background-color: #ffffe6;
 }
@@ -155,7 +160,7 @@ li {
 }
 
 /* mobile specific formatting */
-@media screen and (max-width:1050px) {
+@media screen and (max-width:768px) {
 	#navbar, #navbar-space {
 		display: none;
 	}
@@ -174,12 +179,12 @@ li {
 	#m-navbar {
 		display: block;
 		position: fixed;
-		-webkit-transition: right .3s ease; /* Safari prior 6.1 */
+		-webkit-transition: right .3s ease;
 		transition: right .3s ease;
 		right: -500px;
 		width: auto;
-		padding-top: 20%;
-		height: 100%;
+		padding-top: 20vh;
+		height: 100vh;
 		background-color: #484d6d;
 		z-index: 1;
 	}
@@ -193,18 +198,6 @@ li {
 	}
 
 	.subsection {
-		padding: 30px 5% 0 5%;
-	}
-
-	h4 {
-		font-size: 1.7em;
-	}
-
-	h4 span {
-		font-weight: bold;
-	}
-
-	p, #resume-dl {
-		font-size: 1.3em;
+		padding: 30px 5vw 0 5vw;
 	}
 }

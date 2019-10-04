@@ -15,7 +15,8 @@ const header = document.getElementById("header");
 const headerBg = document.getElementById("header-bg");
 const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
-let mNavbarWidth = mNavbar.clientWidth;
+// const mixItUp = document.getElementById("mix-it-up");
+let mNavbarWidth = mNavbar.clientWidth || 500;
 const scrollOptions = {
 	behavior: "smooth",
 	block: "start",
@@ -34,12 +35,29 @@ mNavResume.addEventListener("click", e => sectionResume.scrollIntoView(scrollOpt
 mNavProgramming.addEventListener("click", e => sectionProgramming.scrollIntoView(scrollOptions));
 mNavFooter.addEventListener("click", e => sectionFooter.scrollIntoView(scrollOptions));
 mNavBtn.addEventListener("click", toggleMobileMenu);
+// mixItUp.addEventListener("click", changeColorPalette);
 //set hamburger menu to initially be closed (offscreen)
 mNavbar.style.right = -mNavbarWidth + "px";
 
+// function changeColorPalette() {
+// 	let red = Math.random() * 50 + 200;
+// 	let green = Math.random() * 50 + 200;
+// 	let blue = Math.random() * 50 + 200;
+// 	while (red > 0 && green > 0 && blue > 0) {
+// 		setTimeout(() => {
+// 			document.getElementById("contents").style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
+// 			console.log(here)
+// 			red -= 50;
+// 			green -= 50;
+// 			blue -= 50;
+// 		}, 1000)
+// 	}
+// }
+
 //open and close the hamburger menu on mobile
 function toggleMobileMenu() {
-	if (mNavbar.style.right == "0px" || mNavbar.style.right == "" || mNavbar.style.right == "0") {
+	mNavbarWidth = mNavbar.clientWidth;
+	if (parseFloat(mNavbar.style.right) >= 0) { //close
 		window.requestAnimationFrame(function(){
 			mNavbar.setAttribute("style", "right: 0");
  			window.requestAnimationFrame(function(){
