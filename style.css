@@ -1,7 +1,7 @@
 #navbar {
 	background-color: #484d6d;
 	width: 100vw;
-	height: 35px;
+	height: 49px;
 	position: fixed;
 	text-align: center;
 	overflow: hidden;
@@ -13,7 +13,7 @@
 	font-size: 1.2em;
 	color: #eaeaea;
 	background-color: transparent;
-	padding: 5px 40px;
+	padding: 12px 40px;
 	border: none;
 	outline: none;
 }
@@ -32,7 +32,7 @@
 }
 
 #navbar-space {
-	height: 35px;
+	height: 49px;
 }
 
 #m-navbar, #m-navbar-btn {
