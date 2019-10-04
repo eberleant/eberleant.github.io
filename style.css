@@ -102,7 +102,7 @@ h4 { /* subheaders inside of each content section */
 	margin: 30px 0 5px 0;
 }
 
-p, li {
+p, li, #resume-dl {
 	font-family: "Verdana";
 	font-size: 1em;
 	color: black;
@@ -122,7 +122,6 @@ li {
 #resume-dl {
 	-webkit-appearance: none;
 	font-family: "Verdana";
-	font-size: 1em;
 	color: black;
 	text-decoration: none;
 	background-color: #f5fbfd;
@@ -156,7 +155,7 @@ li {
 }
 
 /* mobile specific formatting */
-@media screen and (max-width:735px) {
+@media screen and (max-width:1050px) {
 	#navbar, #navbar-space {
 		display: none;
 	}
@@ -175,8 +174,8 @@ li {
 	#m-navbar {
 		display: block;
 		position: fixed;
-		-webkit-transition: right .6s ease; /* Safari prior 6.1 */
-		transition: right .6s ease;
+		-webkit-transition: right .3s ease; /* Safari prior 6.1 */
+		transition: right .3s ease;
 		right: -500px;
 		width: auto;
 		padding-top: 20%;
@@ -205,7 +204,7 @@ li {
 		font-weight: bold;
 	}
 
-	p {
+	p, #resume-dl {
 		font-size: 1.3em;
 	}
 }
