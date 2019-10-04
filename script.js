@@ -17,6 +17,8 @@ const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
 // const mixItUp = document.getElementById("mix-it-up");
 let mNavbarWidth = mNavbar.clientWidth || 500;
+let scrollOffset = 35;
+let mScrollOffset = -15;
 const scrollOptions = {
 	behavior: "smooth",
 	block: "start",
@@ -26,14 +28,14 @@ const scrollOptions = {
 headerBg.style.height = header.clientHeight + "px";
 
 //click events to scroll to the appropriate section
-navAbout.addEventListener("click", e => sectionAbout.scrollIntoView(scrollOptions));
-navResume.addEventListener("click", e => sectionResume.scrollIntoView(scrollOptions));
-navProgramming.addEventListener("click", e => sectionProgramming.scrollIntoView(scrollOptions));
-navFooter.addEventListener("click", e => sectionFooter.scrollIntoView(scrollOptions));
-mNavAbout.addEventListener("click", e => sectionAbout.scrollIntoView(scrollOptions));
-mNavResume.addEventListener("click", e => sectionResume.scrollIntoView(scrollOptions));
-mNavProgramming.addEventListener("click", e => sectionProgramming.scrollIntoView(scrollOptions));
-mNavFooter.addEventListener("click", e => sectionFooter.scrollIntoView(scrollOptions));
+navAbout.addEventListener("click", e => scrollToSection(sectionAbout, scrollOffset));
+navResume.addEventListener("click", e => scrollToSection(sectionResume, scrollOffset));
+navProgramming.addEventListener("click", e => scrollToSection(sectionProgramming, scrollOffset));
+navFooter.addEventListener("click", e => scrollToSection(sectionFooter, scrollOffset));
+mNavAbout.addEventListener("click", e => scrollToSection(sectionAbout, mScrollOffset));
+mNavResume.addEventListener("click", e => scrollToSection(sectionResume, mScrollOffset));
+mNavProgramming.addEventListener("click", e => scrollToSection(sectionProgramming, mScrollOffset));
+mNavFooter.addEventListener("click", e => scrollToSection(sectionFooter, mScrollOffset));
 mNavBtn.addEventListener("click", toggleMobileMenu);
 // mixItUp.addEventListener("click", changeColorPalette);
 //set hamburger menu to initially be closed (offscreen)
@@ -53,6 +55,12 @@ mNavbar.style.right = -mNavbarWidth + "px";
 // 		}, 1000)
 // 	}
 // }
+
+function scrollToSection(section, offset) {
+    window.scrollTo({top: section.getBoundingClientRect().top + window.pageYOffset - offset, 
+        behavior: "smooth",
+    });
+}
 
 //open and close the hamburger menu on mobile
 function toggleMobileMenu() {
