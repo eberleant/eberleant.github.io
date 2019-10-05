@@ -26,6 +26,7 @@ const scrollOptions = {
 }
 
 headerBg.style.height = header.clientHeight + "px";
+setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
 
 //click events to scroll to the appropriate section
 navAbout.addEventListener("click", e => scrollToSection(sectionAbout, scrollOffset));
@@ -65,7 +66,7 @@ function scrollToSection(section, offset) {
 //open and close the hamburger menu on mobile
 function toggleMobileMenu() {
 	mNavbarWidth = mNavbar.clientWidth;
-	if (parseFloat(mNavbar.style.right) >= 0) { //close
+	if (mobileNavbarOpen()) {
 		window.requestAnimationFrame(function(){
 			mNavbar.setAttribute("style", "right: 0");
  			window.requestAnimationFrame(function(){
@@ -82,11 +83,31 @@ function toggleMobileMenu() {
 	}
 }
 
+function mobileNavbarOpen() {
+    if (parseFloat(mNavbar.style.right) >= 0) {
+        return true;
+    }
+    return false;
+}
+
 
 // from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
 // allow swiping to open and close hamburger menu
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
+// close mobile navbar if click outside of navbar when it's open
+document.addEventListener('click', e => {
+    if (mobileNavbarOpen()) {
+        let parent = e.target;
+        while (parent != null) {
+            if (parent == mNavbar) {
+                return;
+            }
+            parent = parent.parentNode;
+        }
+        toggleMobileMenu();
+    }
+});
 
 var xDown = null;                                                        
 var yDown = null;
@@ -97,9 +118,9 @@ function getTouches(evt) {
 }
 
 function handleTouchStart(evt) {
-    const firstTouch = getTouches(evt)[0];                                      
-    xDown = firstTouch.clientX;                                      
-    yDown = firstTouch.clientY;                                      
+    const firstTouch = getTouches(evt)[0];
+    xDown = firstTouch.clientX;
+    yDown = firstTouch.clientY;
 };                                                
 
 function handleTouchMove(evt) {
