@@ -90,17 +90,12 @@ function mobileNavbarOpen() {
     return false;
 }
 
-
-// from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
-// allow swiping to open and close hamburger menu
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
 // close mobile navbar if click outside of navbar when it's open
 document.addEventListener('click', e => {
     if (mobileNavbarOpen()) {
         let parent = e.target;
-        while (parent != null) {
-            if (parent == mNavbar) {
+        while (parent !== null) {
+            if (parent === mNavbar) {
                 return;
             }
             parent = parent.parentNode;
@@ -108,6 +103,11 @@ document.addEventListener('click', e => {
         toggleMobileMenu();
     }
 });
+
+// from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+// allow swiping to open and close hamburger menu
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
 
 var xDown = null;                                                        
 var yDown = null;
