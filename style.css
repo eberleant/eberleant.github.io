@@ -43,6 +43,7 @@
 	background-color: transparent;
 	text-align: center;
 	padding: 50px 0;
+	border-bottom: 30px solid white;
 }
 
 #header-bg {
@@ -60,7 +61,7 @@
 }
 
 .subsection {
-	padding: 30px 15vw 0 15vw;
+	padding: 10px 15vw 0 15vw;
 }
 
 h1 { /* "Evalyn Berleant" in header at top of page */
@@ -97,22 +98,33 @@ h3 span { /* increase size of first letter */
 }
 
 h4 { /* subheaders inside of each content section */
+	display: inline-block;
 	font-family: "Verdana";
-	font-size: 1.7em;
+	font-size: 1.5em;
 	color: black;
-	margin: 30px 0 10px 0;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
 h4 span {
 	font-weight: bold;
 }
 
-p, li, .content-btn {
-	font-family: "Verdana";
-	font-size: 1.3em;
+a {
+	color: #393cb3;
+}
+
+a:hover {
 	color: black;
-	margin: 2px 0;
-	line-height: 1.35em;
+}
+
+p, li, .content-btn {
+	display: inline-block;
+	font-family: "Verdana";
+	font-size: 1.2em;
+	color: #333333;
+	margin-bottom: 20px;
+	line-height: 1.8em;
 }
 
 ul {
@@ -130,10 +142,11 @@ li {
 	color: black;
 	text-decoration: none;
 	background-color: #f5fbfd;
-	padding: 5px 20px 5px 15px;
+	padding: 5px 18px 5px 18px;
 	border: 2px solid #b3c5d7;
 	outline: none;
 	margin-left: 5px;
+	margin-bottom: 25px;
 }
 
 .content-btn:hover {
@@ -198,6 +211,6 @@ li {
 	}
 
 	.subsection {
-		padding: 30px 5vw 0 5vw;
+		padding: 10px 5vw 0 5vw;
 	}
 }
