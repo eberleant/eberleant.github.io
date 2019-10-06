@@ -16,6 +16,7 @@
 	padding: 12px 40px;
 	border: none;
 	outline: none;
+	transition: all .3s ease;
 }
 
 #navbar button:hover, #m-navbar button:hover {
@@ -149,7 +150,7 @@ li {
 	border: 2px solid #b3c5d7;
 	outline: none;
 	margin-left: 5px;
-	margin-bottom: 25px;
+	margin-bottom: 28px;
 }
 
 .content-btn:hover {
