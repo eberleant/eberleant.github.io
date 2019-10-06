@@ -20,6 +20,7 @@
 
 #navbar button:hover, #m-navbar button:hover {
 	color: white;
+	background-color: #5d6e90;
 }
 
 #navbar button:active, #m-navbar button:active {
@@ -43,7 +44,6 @@
 	background-color: transparent;
 	text-align: center;
 	padding: 50px 0;
-	border-bottom: 30px solid white;
 }
 
 #header-bg {
@@ -56,12 +56,15 @@
 
 #contents {
 	width: 100vw;
-	background-color: white;
-	padding-bottom: 20px;
+	background-color: #f8fbff;
+	padding: 30px 0 20px 0;
 }
 
 .subsection {
-	padding: 10px 15vw 0 15vw;
+	padding: 25px 4vw 0 4vw;
+	margin: 0 11vw 30px 11vw;
+	box-shadow: 0 5px 10px #bfbfbf;
+	background-color: white;
 }
 
 h1 { /* "Evalyn Berleant" in header at top of page */
@@ -151,12 +154,18 @@ li {
 
 .content-btn:hover {
 	border: 2px solid darkgray;
-	background-color: white;
+	background-color: #fbfbfb;
 }
 
 .content-btn:active {
 	border: 2px solid black;
-	background-color: #ffffe6;
+	background-color: white;
+}
+
+.content-btn:disabled {
+	border: 2px solid lightgray;
+	background-color: #fbfbfb;
+	color: darkgray;
 }
 
 .footnote {
@@ -212,5 +221,12 @@ li {
 
 	.subsection {
 		padding: 10px 5vw 0 5vw;
+		margin: 0;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	#contents {
+		background-color: white;
 	}
 }

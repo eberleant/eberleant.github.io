@@ -17,17 +17,17 @@ const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
 // const mixItUp = document.getElementById("mix-it-up");
 let mNavbarWidth = mNavbar.clientWidth || 500;
+
+headerBg.style.height = header.clientHeight + "px";
+setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
+
 let scrollOffset = 35;
-let mScrollOffset = -15;
+let mScrollOffset = 0;
 const scrollOptions = {
 	behavior: "smooth",
 	block: "start",
 	inline: "nearest",
 }
-
-headerBg.style.height = header.clientHeight + "px";
-setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
-
 //click events to scroll to the appropriate section
 navAbout.addEventListener("click", e => scrollToSection(sectionAbout, scrollOffset));
 navResume.addEventListener("click", e => scrollToSection(sectionResume, scrollOffset));
@@ -37,24 +37,26 @@ mNavAbout.addEventListener("click", e => scrollToSection(sectionAbout, mScrollOf
 mNavResume.addEventListener("click", e => scrollToSection(sectionResume, mScrollOffset));
 mNavProgramming.addEventListener("click", e => scrollToSection(sectionProgramming, mScrollOffset));
 mNavFooter.addEventListener("click", e => scrollToSection(sectionFooter, mScrollOffset));
+// click hamburger icon to toggle mobile navbar
 mNavBtn.addEventListener("click", toggleMobileMenu);
 // mixItUp.addEventListener("click", changeColorPalette);
-//set hamburger menu to initially be closed (offscreen)
+// set hamburger menu to initially be closed (offscreen)
 mNavbar.style.right = -mNavbarWidth + "px";
 
-// function changeColorPalette() {
-// 	let red = Math.random() * 50 + 200;
-// 	let green = Math.random() * 50 + 200;
-// 	let blue = Math.random() * 50 + 200;
-// 	while (red > 0 && green > 0 && blue > 0) {
-// 		setTimeout(() => {
-// 			document.getElementById("contents").style.backgroundColor = "rgb(" + red + ", " + green + ", " + blue + ")";
-// 			console.log(here)
-// 			red -= 50;
-// 			green -= 50;
-// 			blue -= 50;
-// 		}, 1000)
-// 	}
+// function generateColorPalette() {
+//     palette = {};
+//     let red = Math.random() * 50 + 200;
+//     let green = Math.random() * 50 + 200;
+//     let blue = Math.random() * 50 + 200;
+
+//     for (let i = 0; i < 5; i++) {
+//         palette[i] = "rgb(" + red + ", " + green + ", " + blue + ")";
+//         red -= 50;
+//         green -= 50;
+//         blue -= 50;
+//     }
+
+//     return palette;
 // }
 
 function scrollToSection(section, offset) {
@@ -63,7 +65,7 @@ function scrollToSection(section, offset) {
     });
 }
 
-//open and close the hamburger menu on mobile
+// open and close the hamburger menu (aka mobile navbar)
 function toggleMobileMenu() {
 	mNavbarWidth = mNavbar.clientWidth;
 	if (mobileNavbarOpen()) {
@@ -83,6 +85,7 @@ function toggleMobileMenu() {
 	}
 }
 
+// returns true of mobile navbar is currently open, false if closed
 function mobileNavbarOpen() {
     if (parseFloat(mNavbar.style.right) >= 0) {
         return true;
@@ -91,21 +94,32 @@ function mobileNavbarOpen() {
 }
 
 // close mobile navbar if click outside of navbar when it's open
-document.addEventListener('click', e => {
+// (only if both mousedown and mouseup are outside of mobile navbar)
+let mousedownTarget = null;
+
+document.addEventListener('mousedown', e => mousedownTarget = e.target);
+
+document.addEventListener('mouseup', e => {
     if (mobileNavbarOpen()) {
-        let parent = e.target;
-        while (parent !== null) {
-            if (parent === mNavbar) {
-                return;
-            }
-            parent = parent.parentNode;
+        if (!(hasParent(e.target, mNavbar) || hasParent(mousedownTarget, mNavbar))) {
+            toggleMobileMenu();
         }
-        toggleMobileMenu();
     }
 });
 
+function hasParent(child, node) {
+    let parent = child;
+    while (parent !== null) {
+        if (parent === node) {
+            return true;
+        }
+        parent = parent.parentNode;
+    }
+    return false;
+}
+
 // from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
-// allow swiping to open and close hamburger menu
+// allow swiping to open and close hamburger menu on mobile
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
 
