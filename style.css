@@ -18,7 +18,7 @@
 	outline: none;
 }
 
-#navbar button:hover {
+#navbar button:hover, #m-navbar button:hover {
 	color: white;
 }
 
