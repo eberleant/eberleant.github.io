@@ -3,7 +3,7 @@ const headerBg = document.getElementById("header-bg");
 const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
 
-let mNavbarWidth = 500;
+let mNavbarWidth = Math.max(mNavbar.scrollWidth, 500);
 
 headerBg.style.height = header.clientHeight + "px";
 setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
@@ -67,13 +67,16 @@ function hasParent(child, node) {
     return false;
 }
 
-// from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+// partially from https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
 // allow swiping to open and close hamburger menu on mobile
-document.addEventListener('touchstart', handleTouchStart, false);        
-document.addEventListener('touchmove', handleTouchMove, false);
-
 var xDown = null;                                                        
 var yDown = null;
+var gesture = false;
+
+document.addEventListener('touchstart', handleTouchStart, false);        
+document.addEventListener('touchmove', handleTouchMove, false);
+document.addEventListener('gesturestart', e => {gesture = true});
+document.addEventListener('gestureend', e => {gesture = false})
 
 function getTouches(evt) {
   return evt.touches ||             // browser API
@@ -98,9 +101,9 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if (xDiff > 0 && !mobileNavbarOpen()) {
+        if (!gesture && xDiff > 0 && !mobileNavbarOpen()) {
             toggleMobileMenu();
-        } else if (xDiff < 0 && mobileNavbarOpen()) {
+        } else if (!gesture && xDiff < 0 && mobileNavbarOpen()) {
             toggleMobileMenu();
         }
     }
