@@ -12,7 +12,7 @@ setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
 mNavBtn.addEventListener("click", toggleMobileMenu);
 
 // set hamburger menu to initially be closed (offscreen)
-mNavbar.style.right = mNavbarWidth + "px";
+mNavbar.style.right = "-" + mNavbarWidth + "px";
 
 // open and close the hamburger menu (aka mobile navbar)
 function toggleMobileMenu() {
