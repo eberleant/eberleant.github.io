@@ -149,9 +149,9 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if (xDiff > 0 && mNavbar.style.right == "-" + mNavbarWidth + "px") {
+        if (xDiff > 0 && !mobileNavbarOpen()) {
             toggleMobileMenu();
-        } else if (mNavbar.style.right == "0px" || mNavbar.style.right == "" || mNavbar.style.right == "0") {
+        } else if (xDiff < 0 && mobileNavbarOpen()) {
             toggleMobileMenu();
         }
     }
