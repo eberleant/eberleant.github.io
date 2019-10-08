@@ -3,8 +3,7 @@ const headerBg = document.getElementById("header-bg");
 const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
 
-let mNavbarWidth = mNavbar.scrollWidth || 500;
-alert(mNavbarWidth);
+let mNavbarWidth = 500;
 
 headerBg.style.height = header.clientHeight + "px";
 setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
