@@ -4,6 +4,7 @@ const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
 
 let mNavbarWidth = mNavbar.scrollWidth || 500;
+alert(mNavbarWidth);
 
 headerBg.style.height = header.clientHeight + "px";
 setInterval(() => headerBg.style.height = header.clientHeight + "px", 100);
