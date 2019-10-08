@@ -2,7 +2,7 @@ const header = document.getElementById("header");
 const headerBg = document.getElementById("header-bg");
 const mNavBtn = document.getElementById("m-navbar-btn");
 const mNavbar = document.getElementById("m-navbar");
-alert("updated")
+alert("updated2")
 let mNavbarWidth = Math.max(mNavbar.scrollWidth, 500);
 
 headerBg.style.height = header.clientHeight + "px";
@@ -75,8 +75,14 @@ var gesture = false;
 
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
-document.addEventListener('gesturestart', e => {gesture = true; alert(gesture);});
-document.addEventListener('gestureend', e => {gesture = false; alert(gesture);});
+document.addEventListener('gesturestart', e => {
+    gesture = true;
+    alert("true");
+});
+document.addEventListener('gestureend', e => {
+    gesture = false; 
+    alert("false");
+});
 
 function getTouches(evt) {
   return evt.touches ||             // browser API
