@@ -75,8 +75,8 @@ var gesture = false;
 
 document.addEventListener('touchstart', handleTouchStart, false);        
 document.addEventListener('touchmove', handleTouchMove, false);
-document.addEventListener('gesturestart', e => {gesture = true});
-document.addEventListener('gestureend', e => {gesture = false})
+document.addEventListener('gesturestart', e => {gesture = true; alert(gesture);});
+document.addEventListener('gestureend', e => {gesture = false; alert(gesture);})
 
 function getTouches(evt) {
   return evt.touches ||             // browser API
