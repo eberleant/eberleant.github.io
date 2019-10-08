@@ -13,7 +13,7 @@ mNavBtn.addEventListener("click", toggleMobileMenu);
 
 // set hamburger menu to initially be closed (offscreen)
 mNavbar.style.right = -500 + "px";
-alert(mNavbar.style.right);
+alert("here" + mNavbar.style.right);
 
 // open and close the hamburger menu (aka mobile navbar)
 function toggleMobileMenu() {
