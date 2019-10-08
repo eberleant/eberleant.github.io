@@ -6,6 +6,7 @@ audio {
 }
 
 .video {
+	display: block;
 	margin: 10px 0 30px 0;
 	z-index: -1;
 }
