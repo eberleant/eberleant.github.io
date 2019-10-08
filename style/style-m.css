@@ -1,0 +1,65 @@
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+@-ms-viewport {
+  width: device-width ;
+}
+
+/* mobile specific formatting */
+@media screen and (max-width:768px) {
+	#navbar, #navbar-space {
+		display: none;
+	}
+
+	#m-navbar-btn {
+		display: block;
+		position: fixed;
+		color: white;
+		mix-blend-mode: difference;
+		font-size: 1.5em;
+		padding: 20px 40px;
+		right: 0;
+		z-index: 2;
+	}
+
+	#m-navbar {
+		display: block;
+		position: fixed;
+		-webkit-transition: right .3s ease;
+		transition: right .3s ease;
+		right: -500px;
+		width: auto;
+		padding-top: 20vh;
+		height: 100vh;
+		background-color: #484d6d;
+		z-index: 1;
+		text-align: right;
+	}
+
+	#m-navbar button {
+		display: block;
+		text-align: right;
+		width: 100%;
+		background-color: transparent;
+		padding: 10px 40px;
+	}
+
+	.subsection {
+		padding: 10px 5vw 0 5vw;
+		margin: 0;
+		height: auto;
+		box-shadow: none;
+		background-color: transparent;
+	}
+
+	#contents {
+		background-color: white;
+	}
+
+	.video {
+		width: 100%;
+		height: 50vw;
+	}
+}
