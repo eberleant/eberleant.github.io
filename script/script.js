@@ -80,8 +80,6 @@ function getTouches(evt) {
 }
 
 function handleTouchStart(evt) {
-    numTouches++;
-    alert(numTouches)
     const firstTouch = getTouches(evt)[0];
     xDown = firstTouch.clientX;
     yDown = firstTouch.clientY;
@@ -99,9 +97,9 @@ function handleTouchMove(evt) {
     var yDiff = yDown - yUp;
 
     if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-        if (e.touches.length === 1 && xDiff > 0 && !mobileNavbarOpen()) {
+        if (evt.touches.length === 1 && xDiff > 0 && !mobileNavbarOpen()) {
             toggleMobileMenu();
-        } else if (e.touches.length === 1 && xDiff < 0 && mobileNavbarOpen()) {
+        } else if (evt.touches.length === 1 && xDiff < 0 && mobileNavbarOpen()) {
             toggleMobileMenu();
         }
     }
