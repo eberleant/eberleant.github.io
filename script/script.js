@@ -13,6 +13,7 @@ mNavBtn.addEventListener("click", toggleMobileMenu);
 
 // set hamburger menu to initially be closed (offscreen)
 mNavbar.style.right = -mNavbarWidth + "px";
+alert(mNavbar.style.right);
 
 // open and close the hamburger menu (aka mobile navbar)
 function toggleMobileMenu() {
@@ -24,6 +25,7 @@ function toggleMobileMenu() {
     			mNavbar.setAttribute("style", "right: -" + mNavbarWidth + "px");
   			});
 		});
+        alert("close");
 	} else {
 		window.requestAnimationFrame(function(){
 			mNavbar.setAttribute("style", "right: -" + mNavbarWidth + "px");
@@ -31,6 +33,7 @@ function toggleMobileMenu() {
     			mNavbar.setAttribute("style", "right: 0");
   			});
 		});
+        alert("open")
 	}
 }
 
