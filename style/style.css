@@ -1,3 +1,7 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
 #navbar {
 	background-color: #484d6d;
 	width: 100vw;
@@ -10,7 +14,6 @@
 
 #navbar button, #m-navbar button {
 	-webkit-appearance: none;
-	font-family: "Verdana";
 	font-size: 1.2em;
 	color: #eaeaea;
 	background-color: transparent;
@@ -68,14 +71,13 @@ form {
 }
 
 .subsection {
-	padding: 21px 4vw 0 4vw;
+	padding: 21px 4vw 20px 4vw;
 	margin: 0 11vw 30px 11vw;
 	box-shadow: 0 5px 10px #bfbfbf;
 	background-color: white;
 }
 
 h1 { /* "Evalyn Berleant" in header at top of page */
-	font-family: "Open Sans", sans-serif;
 	font-size: 3em;
 	font-weight: bold;
 	color: white;
@@ -89,7 +91,6 @@ h1 span { /* increase size of first letter (big caps/small caps effect) */
 }
 
 h2 { /* subheader at top of page */
-	font-family: "Verdana";
 	font-size: 1.2em;
 	color: #b3c5d7;
 	line-height: 1.2em;
@@ -97,7 +98,6 @@ h2 { /* subheader at top of page */
 
 h3 { /* titles of each content section */
 	display: block;
-	font-family: "Open Sans", sans-serif;
 	font-size: 2.5em;
 	font-weight: bold;
 	color: #759eb8;
@@ -112,11 +112,10 @@ h3 span { /* increase size of first letter */
 
 h4 { /* subheaders inside of each content section */
 	display: inline-block;
-	font-family: "Verdana";
 	font-size: 1.5em;
 	color: black;
-	margin-bottom: 10px;
-	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-top: 15px;
 	line-height: 1.5em;
 }
 
@@ -134,10 +133,8 @@ a:hover {
 
 p, li, .content-btn {
 	display: inline-block;
-	font-family: "Verdana";
 	font-size: 1.2em;
 	color: #333333;
-	margin-bottom: 20px;
 	line-height: 1.8em;
 }
 
@@ -152,7 +149,6 @@ li {
 
 .content-btn {
 	-webkit-appearance: none;
-	font-family: "Verdana";
 	color: black;
 	text-decoration: none;
 	background-color: #f5fbfd;
@@ -160,7 +156,6 @@ li {
 	border: 2px solid #b3c5d7;
 	outline: none;
 	margin-left: 5px;
-	margin-bottom: 28px;
 }
 
 .content-btn:hover {

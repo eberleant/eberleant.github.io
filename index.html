@@ -39,11 +39,14 @@
 	</div>
 
 	<div id="contents">
-		<div id="about" class="subsection">
+		<div id="about" class="subsection" style="overflow: auto; padding-bottom: 20px">
 			<h3><span>A</span>BOUT ME</h3>
-			<p>Hello! My name is Evalyn Berleant. I am a junior at Brandeis University, pursuing a B.S. in Computer Science. Currently, I am a teaching assistant for COSI131a (Operating Systems). Although my specialty is Java, I have experience in JavaScript, Python, SQL, and bash. My love of programming comes from a general love for learning and trying new things, which has also led me to find interests in areas like music and video-editing.
+			<img src="./images/profile-pic.jpg" width="25%" style="float: left; padding-right: 20px">
+			<p style="display: inline">Hello! My name is Evalyn Berleant. I am a junior at Brandeis University, pursuing a B.S. in Computer Science. I have experience in Java, JavaScript, Python, SQL, and bash. I have worked as a TA for Advanced Programming Techniques (in Java) and Operating Systems, and interned for CQ Consulting as a contractor for the Arkansas Department of Health for the past two summers. I'm always excited to learn something new!</p>
+			<br><br>
+			<p>Email: <a href="mailto:eberleant@gmail.com">eberleant@gmail.com</a>
 			<br>
-			Contact email: <a href="mailto:eberleant@gmail.com">eberleant@gmail.com</a></p>
+			GitHub: <a href="https://github.com/eberleant">eberleant</a></p>
 		</div>
 		<div id="resume" class="subsection">
 			<h3><span>R</span>ESUME</h3>
@@ -52,20 +55,26 @@
 		<div id="programming" class="subsection">
 			<h3><span>P</span>ROGRAMMING</h3>
 
+			<h4><span>React Native</span> (in progress)</h4>
+			<p>Right now, I'm working with a partner on a mobile app for collaborative crossword solving. We decided to use React Native because it is cross-platform and has a wealth of user-made packages.</p>
+
+			<h4><span>Python:</span> <a href="https://github.com/ztbartolome/Mad_Libs_Generator">Mad Libs Generator</a></h4>
+			<p>I worked with Zeline Tricia Bartolome on a Python program that uses natural language processing to generate a MadLib from a passage of text. It processes the passage, then prompts the user to enter words of certain parts of speech and displays the resulting text. (I highly recommend trying it with <a href="https://www.youtube.com/watch?v=o0u4M6vppCI">shia.txt</a>.)</p>
+
 			<h4><span>Java</span></h4>
-			<p>I am a teaching assistant for COSI131a (Operating Systems), which uses Java to teach various OS concepts. I was also a TA for COSI12b (Advanced Programming Concepts), the course that gives students a solid foundation in Java. In this class, I was a primary writer of a programming assignment based on finite state machines, which not only taught the basics of FSMs, but also helped reinforce object-oriented programming concepts.</p>
+			<p>I was a teaching assistant for <a href="https://www.brandeis.edu/registrar/schedule/course?acad_year=2020&crse_id=001751">COSI131a (Operating Systems)</a>, which uses Java to teach various OS concepts, as well as for <a href="https://www.brandeis.edu/registrar/schedule/course?acad_year=2019&crse_id=012337">COSI12b (Advanced Programming Concepts)</a>, a course that gives students a solid foundation in Java. In this class, I was a primary writer of a programming assignment based on finite state machines, which not only taught the basics of FSMs, but also helped reinforce object-oriented programming concepts.</p>
 			
 			<h4><span>JS:</span> <a href="https://eberleant.github.io/multiple-stopwatches/">Multiple Stopwatches</a></h4>
-			<p>In the last few years, I have been an active member of a small YouTube singing community. Recently, I created this application to help myself and others with scripting songs (deciding who sings which lines). When I script a song, I place a high priority on each singer getting approximately the same amount of time as every other singer. Before, I had to play through the song once for every singer so that I could time how long they had to sing. With this tool, by allowing me to create multiple stopwatches and assign a keyboard shortcut to each one, I can quickly figure out how much time each singer has with only one playthrough of the song. (Theoretically. My coordination is only good enough to handle around 3-4 singers at once - which still saves quite a bit of time!)</p>
+			<p>This tool allows the user to create multiple stopwatches and assign a keyboard shortcut to each one to quickly trigger them. It has many potential uses, but I use it to help myself and others with scripting songs (deciding who sings which lines) because I place a high priority on each singer getting approximately the same amount of time as every other singer. With this, I can quickly figure out how much time each singer has with only one playthrough of the song.</p>
 
-			<h4><span>Bash:</span> <a href="https://github.com/eberleant/extract-rename-submissions">Script to assist me with grading</a></h4>
-			<p>This small script was my first foray into bash scripting. I wrote it to help me grade assignments as a TA. The school website allows me to download all student submissions at once; this gives me one folder with a subfolder for each student. Each subfolder contains all of the files that the student submitted, with the filename that the student submitted with. The script that I wrote takes in a CSV file containing each student's first and last names. For each student listed in the CSV file, it pulls their submission files from their subfolder and copies them to a specified location, renames them into a more reasonable (at least, for me) format. The renaming puts the row number from the CSV file at the beginning of the file name, so that ordering by file name puts all the students in the same order as they are in the CSV file. The whole thing is very specific to my usecase, but it saves me many clicks and searches to find the students and submission files that I am supposed to grade.</p>
+			<h4><span>Bash:</span> <a href="https://github.com/eberleant/extract-rename-submissions">Script to help with grading</a></h4>
+			<p>I wrote this small script to help me grade assignments as a teaching assistant. The school website allows me to download all student submissions at once, but the format involves lots of clicks and searches to find the students and submission files that I am supposed to grade. Running this script reorganizes the files so that they're much more efficient for me to find and grade.</p>
 			
 			<h4><span>SQL, STARLIMS, & JScript</span></h4>
-			<p>For the past two summers, I have worked as an intern for CQ Consulting, which is a contractor for the Arkansas Department of Health. In this time, I've had the opportunity to explore their extensive codebase of SQL, STARLIMS (a proprietary language), and JScript. (This has taught me many things, including - but not limited to - the incredible value of good commenting.) In addition to bug-testing, I implemented pagination in the freezer log application, which keeps track of which medical samples are in which freezer.</p>
+			<p>For the past two summers, I have worked as an intern for <a href="https://www.linkedin.com/company/cq-consulting">CQ Consulting</a>, which is a contractor for the Arkansas Department of Health. In this time, I've had the opportunity to explore their extensive codebase of SQL, STARLIMS (a proprietary language), and JScript. In addition to bug-testing and documentation, I implemented pagination in the freezer log application, which keeps track of which medical samples are in which freezer.</p>
 
 			<h4><span>JS:</span> <a href="https://eberleant.github.io/calculator/">Calculator</a></h4>
-			<p>To learn JavaScript, I used a fantastic website called <a href="https://www.theodinproject.com/">The Odin Project</a>. As the final project in the JavaScript Basics section, I created a JavaScript calculator. (I am still working through TOP's courses, learning back-end in Ruby right now - although it's slow going during the school year.)</p>
+			<p>To learn JavaScript, I used a website called <a href="https://www.theodinproject.com/">The Odin Project</a>. As the final project in the JavaScript Basics section, I created a JavaScript calculator. (I am still working through TOP's courses, learning back-end in Ruby right now - although it's slow going during the school year.)</p>
 		</div>
 		<div id="footer" class="subsection">
 			<h3><span>C</span>ONTACT ME</h3>
