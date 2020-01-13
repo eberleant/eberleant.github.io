@@ -16,8 +16,7 @@
 	#m-navbar-btn {
 		display: block;
 		position: fixed;
-		color: white;
-		mix-blend-mode: difference;
+		color: black;
 		font-size: 1.5em;
 		padding: 20px 40px;
 		right: 0;
@@ -51,11 +50,8 @@
 		margin: 0;
 		height: auto;
 		box-shadow: none;
+		border: none;
 		background-color: transparent;
-	}
-
-	#contents {
-		background-color: white;
 	}
 
 	.video {

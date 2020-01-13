@@ -1,21 +1,24 @@
 body {
 	font-family: 'Lato', sans-serif;
+	background-color: #f8fbff;
+	background-image: linear-gradient(#f8fbff, white);
 }
 
 #navbar {
-	background-color: #484d6d;
 	width: 100vw;
 	height: 49px;
 	position: fixed;
 	text-align: center;
 	overflow: scroll;
 	z-index: 1000;
+	background-color: white;
+	border-bottom: solid 3px #7392b7;
 }
 
 #navbar button, #m-navbar button {
 	-webkit-appearance: none;
 	font-size: 1.2em;
-	color: #eaeaea;
+	color: #759eb8;
 	background-color: transparent;
 	padding: 12px 40px;
 	border: none;
@@ -25,7 +28,7 @@ body {
 
 #navbar button:hover, #m-navbar button:hover {
 	color: white;
-	background-color: #5d6e90;
+	background-color: #759eb8;
 }
 
 #navbar button:active, #m-navbar button:active {
@@ -54,34 +57,49 @@ form {
 	text-align: center;
 	padding: 50px 0;
 	overflow: hidden;
+	margin: 0 auto;
 }
 
 #header-bg {
-	background-color: #7392b7; /*if gradients not supported*/
-	background-image: linear-gradient(#484d6d 0%, 5%, #7392b7 50%, 95%, #484d6d 100%);
-	width: 100vw;
+	width: 80vw;
+	margin: 0 auto;
 	position: fixed;
 	z-index: -2;
 }
 
+.divider-line {
+	background-color: #80b9e0;
+	border-radius: 5px;
+	width: 50vw;
+	height: 5px;
+	margin: 0 auto 20px auto;
+}
+
+.divider-line-2 {
+	background-color: #9fd0f3;
+	border-radius: 5px;
+	width: 40vw;
+	height: 3px;
+	margin: 0 auto 20px auto;
+}
+
 #contents {
 	width: 100vw;
-	background-color: #f8fbff;
 	padding: 30px 0 20px 0;
 }
 
 .subsection {
 	padding: 21px 4vw 20px 4vw;
 	margin: 0 11vw 30px 11vw;
-	box-shadow: 0 5px 10px #bfbfbf;
+	border: solid 1px #bfbfbf;
+	border-radius: 5px;
 	background-color: white;
 }
 
 h1 { /* "Evalyn Berleant" in header at top of page */
 	font-size: 3em;
 	font-weight: bold;
-	color: white;
-	text-shadow: 2px 2px 3px #484d6d;
+	color: #7392b7;
 	padding: 5px 0;
 }
 
