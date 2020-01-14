@@ -23,12 +23,15 @@ body {
 	padding: 12px 40px;
 	border: none;
 	outline: none;
+}
+
+#navbar button {
 	transition: all .3s ease;
 }
 
-#navbar button:hover, #m-navbar button:hover {
+#navbar button:hover {
 	color: white;
-	background-color: #759eb8;
+	background-color: #7392b7;
 }
 
 #navbar button:active, #m-navbar button:active {
@@ -151,7 +154,7 @@ a:hover {
 
 p, li, .content-btn {
 	display: inline-block;
-	font-size: 1.2em;
+	font-size: 1.15em;
 	color: #333333;
 	line-height: 1.8em;
 }
