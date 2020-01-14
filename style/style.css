@@ -153,7 +153,6 @@ a:hover {
 }
 
 p, li, .content-btn {
-	display: inline-block;
 	font-size: 1.15em;
 	color: #333333;
 	line-height: 1.8em;
@@ -173,7 +172,7 @@ li {
 	color: black;
 	text-decoration: none;
 	background-color: #f5fbfd;
-	padding: 5px 18px 5px 18px;
+	padding: 10px 18px 10px 18px;
 	border: 2px solid #b3c5d7;
 	outline: none;
 	margin-left: 5px;
