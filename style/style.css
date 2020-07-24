@@ -93,6 +93,7 @@ form {
 h1 { /* "Evalyn Berleant" in header at top of page */
 	font-size: 3em;
 	font-weight: bold;
+	letter-spacing: 1px;
 	color: #7392b7;
 	padding: 5px 0;
 }
@@ -104,7 +105,7 @@ h1 span { /* increase size of first letter (big caps/small caps effect) */
 
 h2 { /* subheader at top of page */
 	font-size: 1.2em;
-	color: #b3c5d7;
+	color: #759eb8;
 	line-height: 1.2em;
 }
 
