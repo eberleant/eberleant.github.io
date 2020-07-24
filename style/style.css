@@ -1,5 +1,5 @@
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lato', sans-serif;
 	background-color: #f8fbff;
 	background-image: linear-gradient(#f8fbff, white);
 }
@@ -71,18 +71,9 @@ form {
 }
 
 .divider-line {
-	background-color: #80b9e0;
-	border-radius: 5px;
+	border-bottom: solid 3px #7392b7;
 	width: 50vw;
-	height: 5px;
-	margin: 0 auto 20px auto;
-}
-
-.divider-line-2 {
-	background-color: #9fd0f3;
-	border-radius: 5px;
-	width: 40vw;
-	height: 3px;
+	height: 0;
 	margin: 0 auto 20px auto;
 }
 
@@ -195,13 +186,13 @@ li {
 }
 
 .footnote {
-	font-size: .7em;
+	font-size: .9em;
 	font-style: italic;
-	margin-bottom: 30px;
+	margin-bottom: 0;
 }
 
 .subtitle {
-	font-size: .7em;
+	font-size: .9em;
 	font-style: italic;
 	margin-bottom: 0;
 }
