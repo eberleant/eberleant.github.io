@@ -122,6 +122,111 @@ const projectsData = [
       },
     ],
   },
+  {
+    title: {
+      text: 'Mad Libs Generator',
+      href: 'http://madlibsgenerator.pythonanywhere.com/',
+    },
+    badges: [
+      {
+        src: 'https://img.shields.io/badge/python-3.9.0-informational',
+        alt: 'Python 3.9.0',
+      },
+      {
+        src: 'https://img.shields.io/badge/nltk-3.5-informational',
+        alt: 'NLTK 3.5',
+      },
+      {
+        src: 'https://img.shields.io/badge/flask-1.1.2-informational',
+        alt: 'Flask 1.1.2',
+      },
+      {
+        src: 'https://img.shields.io/github/last-commit/ztbartolome/Mad_Libs_Generator',
+        alt: 'Last commit',
+      },
+    ],
+    image: 'nltk-logo.png',
+    // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
+    description: <p>I worked with Zeline Tricia Bartolome to create Mad Libs Generator, which uses natural language processing to create a Mad Libs-like game for the user. The generator randomly chooses words from a passage for the user to replace. While there is a selection of passages to choose from, the generator is also capable of taking user-provided passages.</p>,
+    buttons: [
+      {
+        text: 'Check it out',
+        icon: <FiExternalLink />,
+        variant: 'outline-primary',
+        href: 'http://madlibsgenerator.pythonanywhere.com/',
+      },
+      {
+        text: 'GitHub repo',
+        icon: <AiFillGithub />,
+        variant: 'outline-secondary',
+        href: 'https://github.com/ztbartolome/Mad_Libs_Generator',
+      },
+    ],
+  },
+  {
+    title: {
+      text: 'Multiple Stopwatches',
+      href: 'https://eberleant.github.io/multiple-stopwatches',
+    },
+    badges: [
+      {
+        src: 'https://img.shields.io/badge/javascript-es6-informational',
+        alt: 'JavaScript ES6',
+      },
+      {
+        src: 'https://img.shields.io/badge/html-5-informational',
+        alt: 'HTML 5',
+      },
+      {
+        src: 'https://img.shields.io/github/last-commit/eberleant/multiple-stopwatches',
+        alt: 'Last commit',
+      },
+    ],
+    image: 'multiple-stopwatches.gif',
+    // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
+    description: <p>This tool allows you to create multiple stopwatches and assign a keyboard shortcut to each one to quickly trigger them. You can also create macro keybinds, or keyboard shortcuts which change the state of more than one stopwatch at once. It has many potential uses, but I use it to help myself and others with scripting songs (deciding who sings which lines) because I place a high priority on each singer getting approximately the same amount of time as every other singer. With this, I can quickly figure out how much time each singer has with only one playthrough of the song.</p>,
+    buttons: [
+      {
+        text: 'Check it out',
+        icon: <FiExternalLink />,
+        variant: 'outline-primary',
+        href: 'https://eberleant.github.io/multiple-stopwatches',
+      },
+      {
+        text: 'GitHub repo',
+        icon: <AiFillGithub />,
+        variant: 'outline-secondary',
+        href: 'https://github.com/eberleant/multiple-stopwatches',
+      },
+    ],
+  },
+  {
+    title: {
+      text: 'Script to help with grading',
+      href: 'https://github.com/eberleant/extract-rename-submissions',
+    },
+    badges: [
+      {
+        src: 'https://img.shields.io/badge/gnu%20bash-3.2.57-informational',
+        alt: 'GNU Bash 3.2.57',
+      },
+      {
+        src: 'https://img.shields.io/github/last-commit/eberleant/multiple-stopwatches',
+        alt: 'Last commit',
+      },
+    ],
+    image: 'bash-logo.png',
+    // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
+    description: <p>I wrote this small script to help me grade assignments as a teaching assistant. The school website allows me to download all student submissions at once, but the format involves lots of clicks and searches to find the students and submission files that I am supposed to grade. Running this script reorganizes the files so that they are much more efficient for me to find and grade.</p>,
+    buttons: [
+      {
+        text: 'GitHub repo',
+        icon: <AiFillGithub />,
+        variant: 'outline-secondary',
+        href: 'https://github.com/eberleant/extract-rename-submissions',
+      },
+    ],
+  },
 ];
 
 export default projectsData;
