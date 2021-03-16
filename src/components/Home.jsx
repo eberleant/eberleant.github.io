@@ -30,14 +30,14 @@ function Home() {
           </Row>
         </Container>
       </Jumbotron>
-      <Jumbotron className="py-3">
+      <Jumbotron>
         <Container>
           <h4>
             <BiChevronsRight className="mt-n1" />
             Projects
           </h4>
           <hr />
-          <Row>
+          <Row className="mb-5">
             <Col>
               <div className="float-right col-6 col-md-3 pl-0 pr-3">
                 <Image className="w-100" src="youtaite-network.gif" rounded />
@@ -45,13 +45,32 @@ function Home() {
               <h5>
                 <a className="mr-2" href="https://youtaite-network.netlify.app">Youtaite Network</a>
                 <img className="mr-2 mt-n1" src="https://img.shields.io/badge/react-%5E17.0.1-informational" alt="React ^17.0.1" />
-                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/ruby-2.7.1-informational" alt="React ^17.0.1" />
-                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/rails-~%3E%206.0.3-blue" alt="React ^17.0.1" />
-                <img className="mr-2 mt-n1" src="https://img.shields.io/github/last-commit/eberleant/youtaite-network-client" alt="React ^17.0.1" />
+                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/ruby-2.7.1-informational" alt="Ruby 2.7.1" />
+                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/rails-~%3E%206.0.3-blue" alt="Rails ~> 6.0.3" />
+                <img className="mr-2 mt-n1" src="https://img.shields.io/github/last-commit/eberleant/youtaite-network-client" alt="Last commit" />
               </h5>
               {/* eslint-disable-next-line max-len, react/jsx-one-expression-per-line */}
               <p>This is a personal project focused on a community of Youtube content creators who often collaborate with each other. I wanted to show how different collaborations are connected to each other through people - for example, if I am in two different collabs, those two collabs are connected through me. I hope to show the existence of different corners within the community, where groups of people collaborate with each other more often than with someone outside of their corner. I have a other ideas for creatively displaying the data (once I have enough of it), such as identifying closely-related clusters and &quot;representative&quot; collaborations of those clusters. The frontend website is written in React. The data visualization is created using d3. The backend API is written in Ruby on Rails. If you feel like checking out the backend API, the main routes are <a href="https://youtaite-network-api.herokuapp.com/people">/people</a>, <a href="https://youtaite-network-api.herokuapp.com/collabs">/collabs</a>, and <a href="https://youtaite-network-api.herokuapp.com/roles">/roles</a>.</p>
               <Button href="https://youtaite-network.netlify.app" variant="outline-primary">
+                Check it out
+                <FiExternalLink className="ml-2 mt-n1" />
+              </Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <div className="float-left col-6 col-md-3 pl-0 pr-3">
+                <Image className="w-100" src="cerbaris.gif" rounded />
+              </div>
+              <h5>
+                <a className="mr-2" href="https://campusrover.github.io/PupperPy/web_interface.html">CERBARIS: real-time web interface</a>
+                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/vue-%5E2.6.11-informational" alt="Vue ^2.6.11" />
+                <img className="mr-2 mt-n1" src="https://img.shields.io/badge/python-3.9.0-informational" alt="Python 3.9.0" />
+                <img className="mr-2 mt-n1" src="https://img.shields.io/github/last-commit/campusrover/PupperPy" alt="Last commit" />
+              </h5>
+              {/* eslint-disable-next-line max-len, react/jsx-one-expression-per-line */}
+              <p>Under Prof. Pito Salas&apos;s mentorship, I worked with Roshan Nanu, Ben Ballintyn, and Chris Tam in a robotics-centered independent study. The project involved building and customizing a Stanford Pupper robot. As part of this, I developed a web interface that displays data in real-time about the robot’s state, including sensor data, computer vision data, and current behavior. I used Vue.js, combined with paper.js, JointJS, and BootstrapVue, for the frontend of the web interface. When the robot is running, its control script (written in Python) pushes data to the web interface, which then updates its display. The website can be found at <a href="https://cerbaris.netlify.app">cerbaris.netlify.app</a>, but without the robot running, no data is being received or updated. A detailed technical description of the site can also be found on the <a href="https://campusrover.github.io/PupperPy/web_interface.html">web interface section of our final project report</a>.</p>
+              <Button href="https://campusrover.github.io/PupperPy/web_interface.html" variant="outline-primary">
                 Check it out
                 <FiExternalLink className="ml-2 mt-n1" />
               </Button>
