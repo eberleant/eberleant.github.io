@@ -59,7 +59,7 @@ function Home() {
           </Row>
           <Row>
             <Col>
-              <div className="float-left col-6 col-md-3 pl-0 pr-3">
+              <div className="float-right col-6 col-md-3 pl-0 pr-3">
                 <Image className="w-100" src="cerbaris.gif" rounded />
               </div>
               <h5>

@@ -16,7 +16,7 @@ export default function App() {
   return (
     <Router>
       <div>
-        <Navbar bg="dark" variant="dark" expand="lg">
+        <Navbar bg="dark" variant="dark" expand="sm">
           <Container>
             <Navbar.Brand href="/">Evalyn Berleant</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
