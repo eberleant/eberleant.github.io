@@ -14,7 +14,7 @@ function Home() {
           <InfoBox data={aboutData} mode="list left" />
         </Container>
       </Jumbotron>
-      <Jumbotron>
+      <Jumbotron className="mb-0">
         <Container>
           <h4>
             <BiChevronsRight className="mt-n1" />

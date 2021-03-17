@@ -48,6 +48,27 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+
+        {/* footer */}
+        <Navbar bg="dark" variant="dark" className="flex-column">
+          <Nav className="mr-auto ml-auto">
+            <Nav.Link href="mailto:eberleant@gmail.com">Like what you see? Let&apos;s work together.</Nav.Link>
+          </Nav>
+          <Nav className="mr-auto ml-auto">
+            <Nav.Link href="mailto:eberleant@gmail.com" aria-label="Email link">
+              <IoMdMail size="1.5rem" />
+            </Nav.Link>
+            <Nav.Link href="https://github.com/eberleant" aria-label="Github link">
+              <AiFillGithub size="1.5rem" />
+            </Nav.Link>
+            <Nav.Link href="https://www.linkedin.com/in/eberleant" aria-label="Linkedin link">
+              <AiFillLinkedin size="1.5rem" />
+            </Nav.Link>
+            <Nav.Link href="https://www.facebook.com/evalyn.berleant" aria-label="Facebook link">
+              <AiFillFacebook size="1.5rem" />
+            </Nav.Link>
+          </Nav>
+        </Navbar>
       </div>
     </Router>
   );
