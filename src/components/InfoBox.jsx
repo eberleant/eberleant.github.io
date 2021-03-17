@@ -14,7 +14,7 @@ function Project({ data, mode }) {
       <Col>
         {mode.startsWith('list') && (
           <div className={`col-6 col-md-3 ${mode.endsWith('left') ? 'float-left pl-0 pr-3' : 'float-right pr-0 pl-3'}`}>
-            <Image className="w-100" src={image} rounded />
+            <Image className="w-100 h-auto" width="1" height="1" src={image} rounded />
           </div>
         )}
         <h5>
