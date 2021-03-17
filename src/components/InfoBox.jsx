@@ -5,16 +5,18 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
-function Project({ data }) {
+function Project({ data, mode }) {
   const {
     title, badges, image, description, buttons,
   } = data;
   return (
     <Row className="mb-5">
       <Col>
-        <div className="float-right col-6 col-md-3 pl-3">
-          <Image className="w-100" src={image} rounded />
-        </div>
+        {mode.startsWith('list') && (
+          <div className={`col-6 col-md-3 ${mode.endsWith('left') ? 'float-left pl-0 pr-3' : 'float-right pr-0 pl-3'}`}>
+            <Image className="w-100" src={image} rounded />
+          </div>
+        )}
         <h5>
           {(title.href
             && <a className="mr-2" href={title.href}>{title.text}</a>)
@@ -53,6 +55,11 @@ Project.propTypes = {
       href: PropTypes.string.isRequired,
     })),
   }).isRequired,
+  mode: PropTypes.string,
+};
+
+Project.defaultProps = {
+  mode: 'list right',
 };
 
 export default Project;

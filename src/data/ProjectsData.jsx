@@ -14,6 +14,10 @@ const projectsData = [
         alt: 'React ^17.0.1',
       },
       {
+        src: 'https://img.shields.io/badge/d3.js-6.6.0-informational',
+        alt: 'D3.js 6.6.0',
+      },
+      {
         src: 'https://img.shields.io/badge/ruby-2.7.1-informational',
         alt: 'Ruby 2.7.1',
       },
@@ -211,7 +215,7 @@ const projectsData = [
         alt: 'GNU Bash 3.2.57',
       },
       {
-        src: 'https://img.shields.io/github/last-commit/eberleant/multiple-stopwatches',
+        src: 'https://img.shields.io/github/last-commit/eberleant/extract-rename-submissions',
         alt: 'Last commit',
       },
     ],
