@@ -11,6 +11,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillFacebook } from 'react-icons/ai';
 import { IoMdMail } from 'react-icons/io';
 import Home from './components/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.scss';
 
 export default function App() {
   return (

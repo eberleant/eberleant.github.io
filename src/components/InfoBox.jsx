@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 
-function Project({ data, mode }) {
+function InfoBox({ data, mode }) {
   const {
     title, badges, image, description, buttons,
   } = data;
@@ -37,7 +37,7 @@ function Project({ data, mode }) {
   );
 }
 
-Project.propTypes = {
+InfoBox.propTypes = {
   data: PropTypes.shape({
     title: PropTypes.shape({
       text: PropTypes.string.isRequired,
@@ -58,8 +58,8 @@ Project.propTypes = {
   mode: PropTypes.string,
 };
 
-Project.defaultProps = {
+InfoBox.defaultProps = {
   mode: 'list right',
 };
 
-export default Project;
+export default InfoBox;

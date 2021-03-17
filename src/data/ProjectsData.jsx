@@ -149,7 +149,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'nltk-logo.png',
+    image: 'logos/nltk.png',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>I worked with Zeline Tricia Bartolome to create Mad Libs Generator, which uses natural language processing to create a Mad Libs-like game for the user. The generator randomly chooses words from a passage for the user to replace. While there is a selection of passages to choose from, the generator is also capable of taking user-provided passages.</p>,
     buttons: [
@@ -219,7 +219,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'bash-logo.png',
+    image: 'logos/bash.png',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>I wrote this small script to help me grade assignments as a teaching assistant. The school website allows me to download all student submissions at once, but the format involves lots of clicks and searches to find the students and submission files that I am supposed to grade. Running this script reorganizes the files so that they are much more efficient for me to find and grade.</p>,
     buttons: [
