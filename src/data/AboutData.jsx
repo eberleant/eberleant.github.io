@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsDownload } from 'react-icons/bs';
+import { ImFilePdf } from 'react-icons/im';
 
 const aboutData = {
   title: {
@@ -29,8 +29,8 @@ const aboutData = {
   buttons: [
     {
       text: 'Resume',
-      icon: <BsDownload />,
-      href: 'https://docs.google.com/uc?id=14vIpSHMwW7P7VY_oF7SbdWgbxLmJZ1SI&export=download',
+      icon: <ImFilePdf />,
+      href: 'resume.pdf',
       variant: 'outline-light',
     },
   ],
