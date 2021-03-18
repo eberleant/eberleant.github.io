@@ -15,11 +15,11 @@ const aboutData = {
       alt: 'GPA 3.92',
     },
     {
-      src: 'https://img.shields.io/badge/honors-magna%20cum%20laude-orange',
-      alt: 'Honors: magna cum laude',
+      src: 'https://img.shields.io/badge/magna%20cum%20laude-orange',
+      alt: 'magna cum laude',
     },
     {
-      src: 'https://img.shields.io/badge/loves%20to%20learn-%E2%99%A5-ff69b4',
+      src: 'https://img.shields.io/badge/loves%20to%20learn-ff69b4',
       alt: 'Loves to learn',
     },
   ],

@@ -17,19 +17,19 @@ function InfoBox({ data, mode }) {
             <Image className="w-100 h-auto" width="1" height="1" src={image} rounded />
           </div>
         )}
-        <h5>
+        <h5 className="d-flex flex-wrap align-items-baseline" style={{ gap: '.5rem' }}>
           {(title.href
-            && <a className="mr-2" href={title.href}>{title.text}</a>)
-            || <span className="mr-2">{title.text}</span>}
+            && <a href={title.href}>{title.text}</a>)
+            || <span>{title.text}</span>}
           {badges.map((badge) => (
-            <img key={badge.alt} className="mr-2 mt-n1" src={badge.src} alt={badge.alt} />
+            <img key={badge.alt} className="mt-n1" src={badge.src} alt={badge.alt} />
           ))}
         </h5>
         {description}
         {buttons.map((button) => (
           <Button className="mr-2" href={button.href} variant={button.variant}>
             {button.text}
-            {React.cloneElement(button.icon, { className: 'ml-2 mt-n1' })}
+            {React.cloneElement(button.icon, { className: 'ml-2' })}
           </Button>
         ))}
       </Col>
