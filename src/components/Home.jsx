@@ -27,7 +27,7 @@ function Home() {
             <div className="mb-5 fade-x">
               <div className="scroll-x">
                 {skillsData.map((skillData) => (
-                  <SkillBox data={skillData} />
+                  <SkillBox key={skillData.title.text} data={skillData} />
                 ))}
               </div>
             </div>
@@ -38,7 +38,7 @@ function Home() {
           </h4>
           <hr />
           {projectsData.map((projectData) => (
-            <InfoBox data={projectData} />
+            <InfoBox key={projectData.title.text} data={projectData} />
           ))}
         </Container>
       </Jumbotron>

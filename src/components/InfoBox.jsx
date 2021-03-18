@@ -27,7 +27,7 @@ function InfoBox({ data, mode }) {
         </h5>
         {description}
         {buttons.map((button) => (
-          <Button className="mr-2" href={button.href} variant={button.variant}>
+          <Button key={button.text} className="mr-2" href={button.href} variant={button.variant}>
             {button.text}
             {React.cloneElement(button.icon, { className: 'ml-2' })}
           </Button>
