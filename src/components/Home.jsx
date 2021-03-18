@@ -4,6 +4,8 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import { BiChevronsRight } from 'react-icons/bi';
+import { AiOutlineUnorderedList } from 'react-icons/ai';
+import { BsGrid } from 'react-icons/bs';
 import SkillBox from './SkillBox';
 import InfoBox from './InfoBox';
 import aboutData from '../data/AboutData';
@@ -37,7 +39,7 @@ function Home() {
           <hr />
           <div style={{ position: 'relative' }}>
             <div className="mb-5 fade-x">
-              <div className="scroll-x">
+              <div className="px-3 scroll-x">
                 {skillsData.map((skillData) => (
                   <SkillBox key={skillData.title.text} data={skillData} />
                 ))}
@@ -48,8 +50,8 @@ function Home() {
             <BiChevronsRight className="mt-n1" />
             Projects
             <ToggleButtonGroup className="mt-n2 ml-3" type="radio" name="options" defaultValue="list">
-              <ToggleButton variant="secondary" value="list" onClick={handleListMode}>List</ToggleButton>
-              <ToggleButton variant="secondary" value="icon" onClick={handleIconMode}>Icon</ToggleButton>
+              <ToggleButton variant="secondary" value="list" onClick={handleListMode}><AiOutlineUnorderedList /></ToggleButton>
+              <ToggleButton variant="secondary" value="icon" onClick={handleIconMode}><BsGrid /></ToggleButton>
             </ToggleButtonGroup>
           </h4>
           <hr />

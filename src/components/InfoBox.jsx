@@ -26,12 +26,14 @@ function InfoBox({ data, mode }) {
           ))}
         </h5>
         {description}
-        {buttons.map((button) => (
-          <Button key={button.text} className="mr-2" href={button.href} variant={button.variant}>
-            {button.text}
-            {React.cloneElement(button.icon, { className: 'ml-2 mt-n1' })}
-          </Button>
-        ))}
+        <div className="d-flex flex-wrap" style={{ gap: '.5rem' }}>
+          {buttons.map((button) => (
+            <Button key={button.text} href={button.href} variant={button.variant}>
+              {button.text}
+              {React.cloneElement(button.icon, { className: 'ml-2 mt-n1' })}
+            </Button>
+          ))}
+        </div>
       </Col>
     </Row>
   );
@@ -42,20 +44,22 @@ function InfoBox({ data, mode }) {
         <Image className="w-50 h-auto mt-3 mx-auto" width="1" height="1" variant="top" src={image} rounded />
         <Card.Body className="mb-n2">
           <Card.Title className="text-center mb-1"><a href={title.href}>{title.text}</a></Card.Title>
-          <div className="overflow-auto mb-3" style={{ maxHeight: '160px' }}>
-            <div className="d-flex flex-wrap justify-content-center mt-n1 mb-2">
+          <div className="overflow-auto mb-2" style={{ maxHeight: '185px' }}>
+            <div className="d-flex flex-wrap justify-content-center mb-1" style={{ gap: '.5rem' }}>
               {badges.map((badge) => (
-                <img key={badge.alt} className="mt-1 mr-2" src={badge.src} alt={badge.alt} />
+                <img key={badge.alt} src={badge.src} alt={badge.alt} />
               ))}
             </div>
             {description}
           </div>
-          {buttons.map((button) => (
-            <Button key={button.text} className="mr-2 mb-2" href={button.href} variant={button.variant}>
-              {button.text}
-              {React.cloneElement(button.icon, { className: 'ml-2 mt-n1' })}
-            </Button>
-          ))}
+          <div className="d-flex flex-wrap justify-content-center" style={{ gap: '.5rem' }}>
+            {buttons.map((button) => (
+              <Button key={button.text} href={button.href} variant={button.variant}>
+                {button.text}
+                {React.cloneElement(button.icon, { className: 'ml-2 mt-n1' })}
+              </Button>
+            ))}
+          </div>
         </Card.Body>
       </Card>
     </Col>
