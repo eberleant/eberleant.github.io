@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import ToggleButton from 'react-bootstrap/ToggleButton';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup';
 import { BiChevronsRight } from 'react-icons/bi';
 import SkillBox from './SkillBox';
 import InfoBox from './InfoBox';
@@ -9,6 +11,16 @@ import skillsData from '../data/SkillsData';
 import projectsData from '../data/ProjectsData';
 
 function Home() {
+  const [mode, setMode] = useState('list right');
+
+  const handleListMode = () => {
+    setMode('list right');
+  };
+
+  const handleIconMode = () => {
+    setMode('icon');
+  };
+
   return (
     <>
       <Jumbotron className="mb-0" style={{ backgroundColor: '#282c34', color: 'lightgrey', borderRadius: 0 }}>
@@ -35,11 +47,17 @@ function Home() {
           <h4>
             <BiChevronsRight className="mt-n1" />
             Projects
+            <ToggleButtonGroup className="mt-n2 ml-3" type="radio" name="options" defaultValue="list">
+              <ToggleButton variant="secondary" value="list" onClick={handleListMode}>List</ToggleButton>
+              <ToggleButton variant="secondary" value="icon" onClick={handleIconMode}>Icon</ToggleButton>
+            </ToggleButtonGroup>
           </h4>
           <hr />
-          {projectsData.map((projectData) => (
-            <InfoBox key={projectData.title.text} data={projectData} />
-          ))}
+          <div className="d-flex flex-wrap">
+            {projectsData.map((projectData) => (
+              <InfoBox key={projectData.title.text} data={projectData} mode={mode} />
+            ))}
+          </div>
         </Container>
       </Jumbotron>
     </>

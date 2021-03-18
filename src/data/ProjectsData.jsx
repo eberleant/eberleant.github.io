@@ -50,7 +50,7 @@ const projectsData = [
   },
   {
     title: {
-      text: 'CERBARIS: real-time web interface',
+      text: 'CERBARIS: real-time display',
       href: 'https://campusrover.github.io/PupperPy/web_interface.html',
     },
     badges: [
