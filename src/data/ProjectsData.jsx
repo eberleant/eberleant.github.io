@@ -30,7 +30,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'youtaite-network.gif',
+    image: 'gifs/youtaite-network.gif',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>This is a personal project focused on a community of Youtube content creators who often collaborate with each other. I wanted to show how different collaborations are connected to each other through people - for example, if I am in two different collabs, those two collabs are connected through me. I hope to show the existence of different corners within the community, where groups of people collaborate with each other more often than with someone outside of their corner. I have a other ideas for creatively displaying the data (once I have enough of it), such as identifying closely-related clusters and &quot;representative&quot; collaborations of those clusters. The frontend website is written in React. The data visualization is created using d3. The backend API is written in Ruby on Rails. If you feel like checking out the backend API, the main routes are <a href="https://youtaite-network-api.herokuapp.com/people">/people</a>, <a href="https://youtaite-network-api.herokuapp.com/collabs">/collabs</a>, and <a href="https://youtaite-network-api.herokuapp.com/roles">/roles</a>.</p>,
     buttons: [
@@ -67,7 +67,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'cerbaris.gif',
+    image: 'gifs/cerbaris.gif',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>Under Prof. Pito Salas&apos;s mentorship, I worked with Roshan Nanu, Ben Ballintyn, and Chris Tam in a robotics-centered independent study. The project involved building and customizing a Stanford Pupper robot. As part of this, I developed a web interface that displays data in real-time about the robot’s state, including sensor data, computer vision data, and current behavior. I used Vue.js, combined with paper.js, JointJS, and BootstrapVue, for the frontend of the web interface. When the robot is running, its control script (written in Python) pushes data to the web interface, which then updates its display. The website can be found at <a href="https://cerbaris.netlify.app">cerbaris.netlify.app</a>, but without the robot running, no data is being received or updated. A detailed technical description of the site can also be found on the <a href="https://campusrover.github.io/PupperPy/web_interface.html">web interface section of our final project report</a>.</p>,
     buttons: [
@@ -108,7 +108,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'swarmbots.gif',
+    image: 'gifs/swarmbots.gif',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>I worked with Kelly Duan to create SWARMBOTS, a ROS and Gazebo program which allows multiple robots in a swarm to collaboratively map their environment. At any time, there is a single leader (the <em>swarmboss</em>) whose movement dictates the behavior of the other robots in the swarm, who may follow or disperse from the leader. If the swarmboss becomes unavailable or stuck for any reason, a different robot will automatically be assigned as the new swarmboss. Through the command-line, you can specify the mode (follow or disperse), as well as the number of robots to spawn. 🤖🦠</p>,
     buttons: [
@@ -186,7 +186,7 @@ const projectsData = [
         alt: 'Last commit',
       },
     ],
-    image: 'multiple-stopwatches.gif',
+    image: 'gifs/multiple-stopwatches.gif',
     // eslint-disable-next-line max-len, react/jsx-one-expression-per-line
     description: <p>This tool allows you to create multiple stopwatches and assign a keyboard shortcut to each one to quickly trigger them. You can also create macro keybinds, or keyboard shortcuts which change the state of more than one stopwatch at once. It has many potential uses, but I use it to help myself and others with scripting songs (deciding who sings which lines) because I place a high priority on each singer getting approximately the same amount of time as every other singer. With this, I can quickly figure out how much time each singer has with only one playthrough of the song.</p>,
     buttons: [
