@@ -38,8 +38,15 @@ function Home() {
           </h4>
           <hr />
           <div style={{ position: 'relative' }}>
-            <div className="mb-5 fade-x">
-              <div className="px-3 scroll-x">
+            <div className="fade-x mb-5">
+              <div
+                className="scroll-x d-flex"
+                style={{
+                  gap: '.5rem',
+                  borderLeft: '1rem solid transparent',
+                  borderRight: '1rem solid transparent',
+                }}
+              >
                 {skillsData.map((skillData) => (
                   <SkillBox key={skillData.title.text} data={skillData} />
                 ))}

@@ -6,7 +6,7 @@ function SkillBox({ data }) {
   const { title, image } = data;
   return (
     <a href={title.href}>
-      <Card className="d-inline-block mx-2" style={{ width: '130px' }}>
+      <Card style={{ width: '130px' }}>
         <Card.Img className="p-3 w-100 h-auto" width="1" height="1" variant="top" src={image} />
         <Card.Header className="text-center text-truncate p-1">
           <strong>{title.text}</strong>
