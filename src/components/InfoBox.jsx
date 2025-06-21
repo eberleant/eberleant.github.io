@@ -12,21 +12,21 @@ function InfoBox({ data, mode }) {
   } = data;
 
   const renderListBox = () => (
-    <Row className="mb-5">
+    <Row>
       <Col>
         <div className={`col-6 col-md-3 ${mode.endsWith('left') ? 'float-left pl-0 pr-3' : 'float-right pr-0 pl-3'}`}>
           <Image className="w-100 h-auto" width="1" height="1" src={image} rounded />
         </div>
-        <h5 className="d-flex flex-wrap align-items-baseline" style={{ gap: '.5rem' }}>
+        <h5 className="d-flex flex-wrap align-items-center" style={{ gap: '.5rem' }}>
           {(title.href
             && <a href={title.href}>{title.text}</a>)
             || <span>{title.text}</span>}
           {badges.map((badge) => (
-            <img key={badge.alt} className="mt-n1" src={badge.src} alt={badge.alt} />
+            <img key={badge.alt} src={badge.src} alt={badge.alt} />
           ))}
         </h5>
         {description}
-        <div className="d-flex flex-wrap" style={{ gap: '.5rem' }}>
+        <div className={`d-flex flex-wrap ${buttons.length > 0 ? 'mb-5' : ''}`} style={{ gap: '.5rem' }}>
           {buttons.map((button) => (
             <Button key={button.text} href={button.href} variant={button.variant}>
               {button.text}

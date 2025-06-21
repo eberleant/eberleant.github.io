@@ -24,16 +24,16 @@ export default function App() {
             <Navbar.Collapse className="justify-content-end">
               <Nav>
                 <div className="d-flex flex-row">
-                  <Nav.Link className="pr-2" href="mailto:eberleant@gmail.com" aria-label="Email link">
+                  <Nav.Link href="mailto:eberleant@gmail.com" aria-label="Email link">
                     <IoMdMail size="1.5rem" />
                   </Nav.Link>
-                  <Nav.Link className="pr-2" href="https://github.com/eberleant" aria-label="Github link">
+                  <Nav.Link href="https://github.com/eberleant" aria-label="Github link">
                     <AiFillGithub size="1.5rem" />
                   </Nav.Link>
-                  <Nav.Link className="pr-2" href="https://www.linkedin.com/in/eberleant" aria-label="Linkedin link">
+                  <Nav.Link href="https://www.linkedin.com/in/eberleant" aria-label="Linkedin link">
                     <AiFillLinkedin size="1.5rem" />
                   </Nav.Link>
-                  <Nav.Link className="pr-2" href="https://www.facebook.com/evalyn.berleant" aria-label="Facebook link">
+                  <Nav.Link href="https://www.facebook.com/evalyn.berleant" aria-label="Facebook link">
                     <AiFillFacebook size="1.5rem" />
                   </Nav.Link>
                 </div>
